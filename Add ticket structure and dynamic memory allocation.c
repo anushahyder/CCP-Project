@@ -20,7 +20,7 @@ struct ticket {
     
 };
 
-int main() {
+struct ticket *InitializeTicket() {
 
     int capacity = 10, ticketcount = 0;
 
@@ -30,7 +30,7 @@ int main() {
     
     if (ticketrecord == NULL){
         printf("Memory allocation failed!");
-        return 1;
+        return NULL;
     }
     
 
@@ -41,17 +41,15 @@ int main() {
 
         if (temp == NULL) {
           printf("Memory reallocation failed!");
-          return 1;
+          return NULL;
         }
         else {
+            
             ticketrecord = temp;
             capacity = capacity + 10;
-
-            
+           
         }
     }
-
-
    
-    return 0;
+    return ticketrecord;
 }
