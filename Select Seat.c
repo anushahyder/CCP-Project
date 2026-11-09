@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int SelectSeat( int rows, int cols, struct ticket *ticketrecord, char date [], int ticketcount, int trainId){
+int SelectSeat( int rows, int cols, struct ticket *ticketrecord, char date [], int ticketcount, int trainId, int *selectedRow, int *selectedCol){
 
     int r = 0, c =0, temp = 0;
 
