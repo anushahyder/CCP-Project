@@ -114,7 +114,7 @@ int main(void) {
             printf("\nAre you sure you want to exit? (1 for Yes / 0 for No): ");
             int confirm;
             scanf("%d", &confirm);
-            if (confirm == 1) {
+            if (confirm == 1) { //do free the dynamic memory
                 free(floor); 
                 printf("\nSystem cleared. Goodbye!\n");
                 return 0;
