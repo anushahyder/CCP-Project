@@ -94,7 +94,7 @@ int staffLogin(void){
     } 
 }
 
-int main(void) { 
+void staffMenu(void) { 
 	int menu;
 	while(1){
 		printf("\nGo to:\n1. Registration Page\n2. Login Page\n3. Exit Program"); // Added an explicit exit option
@@ -117,7 +117,7 @@ int main(void) {
             if (confirm == 1) { //do free the dynamic memory
                 free(floor); 
                 printf("\nSystem cleared. Goodbye!\n");
-                return 0;
+                return;
             }
             break;
 		default:
@@ -125,5 +125,4 @@ int main(void) {
 			continue;
 	} 
     }
-    return 0;
 }
